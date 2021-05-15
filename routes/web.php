@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ShipmentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,16 +15,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layouts.landing.app');
+    return view('welcome');
 });
+Route::view('/about-us','pages.about');
+Route::view('/track','pages.track');
+Route::post('/track', [\App\Http\Controllers\TrackController::class,'track'])->name('track.now');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [ShipmentController::class,'stats'])->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
-
-Route::resource('/shipment', \App\Http\Controllers\ShipmentController::class)->names('shipment');
-
-//Route::get('')
+Route::get('/shipment/download/{id}', [ShipmentController::class,'download'])->name('shipment.print');
+Route::resource('/shipment', ShipmentController::class)->names('shipment');
+Route::get('/receive',[ShipmentController::class,'receive'])->name('receive.index');
+Route::post('/receive',[ShipmentController::class,'storeReceive'])->name('receive.store');
 

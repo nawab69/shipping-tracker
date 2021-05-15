@@ -1,4 +1,43 @@
 <x-app-layout>
+    <script>
+        let packageCount = 0;
+        const addPackage = (e) =>{
+            e.preventDefault();
+            packageCount++;
+
+            const html_to_insert = `
+                        <div class="lg:flex" id="package-${packageCount}">
+                            <div class="my-2 mx-2">
+                                <x-label for="qty-${packageCount}" :value="__('QTY')" />
+                                <x-input id="qty-${packageCount}" class="block mt-1 w-full" type="number" name="qty[${packageCount}]" required autofocus />
+                            </div>
+                            <div class="my-2 mx-2">
+                                <x-label for="type-${packageCount}" :value="__('Piece Type')" />
+                                <select class='rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full mt-2' id="type-${packageCount}" name="type[${packageCount}]">
+                                    <option value="Pallet">Pallet</option>
+                                    <option value="Carton">Carton</option>
+                                    <option value="Crate">Crate</option>
+                                    <option value="Loose">Loose</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </div>
+
+                            <div class="my-2 mx-2">
+                                <x-label for="description-${packageCount}" :value="__('Description')" />
+                                <x-input id="description-${packageCount}" class="block mt-1 w-full" type="text" name="description[${packageCount}]" required autofocus />
+                            </div>
+                            <div class="my-2 mx-2">
+                                <x-label for="weight-${packageCount}" :value="__('Weight')" />
+                                <x-input id="weight-${packageCount}" class="block mt-1 w-full" type="number" step="0.01" name="weight[${packageCount}]" required autofocus />
+                            </div>
+                        </div>
+            `;
+
+            document.getElementById('packages').insertAdjacentHTML('beforeend', html_to_insert);
+
+            console.log('Add package',packageCount);
+        }
+    </script>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Create Shipment') }}
@@ -141,8 +180,39 @@
                     </div>
                 </div>
 
-                <div class="m-6 p-6 bg-white border-gray-200 w-full overflow-hidden shadow-sm sm:rounded-lg">
+                <div  class="m-6 p-6 bg-white border-gray-200 w-full overflow-hidden shadow-sm sm:rounded-lg">
                     Packages
+                    <div id="packages">
+                        <div class="lg:flex" id="package-0">
+                            <div class="my-2 mx-2">
+                                <x-label for="qty-0" :value="__('QTY')" />
+                                <x-input id="qty-0" class="block mt-1 w-full" type="number" name="qty[0]" required autofocus />
+                            </div>
+                            <div class="my-2 mx-2">
+                                <x-label for="type" :value="__('Piece Type')" />
+                                <select class='rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full mt-2' id="type-0" name="type[0]">
+                                    <option value="Pallet">Pallet</option>
+                                    <option value="Carton">Carton</option>
+                                    <option value="Crate">Crate</option>
+                                    <option value="Loose">Loose</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </div>
+
+                            <div class="my-2 mx-2">
+                                <x-label for="description-0" :value="__('Description')" />
+                                <x-input id="description-0" class="block mt-1 w-full" type="text" name="description[0]" required autofocus />
+                            </div>
+                            <div class="my-2 mx-2">
+                                <x-label for="weight-0" :value="__('Weight')" />
+                                <x-input id="weight-0" class="block mt-1 w-full" type="number" step="0.01" name="weight[0]" required autofocus />
+                            </div>
+                        </div>
+                    </div>
+
+                    <x-button onClick="addPackage(event)">Add Package</x-button>
+
+
 
                 </div>
             </div>
@@ -186,4 +256,6 @@
         </x-form.open>
         </div>
     </div>
+
+
 </x-app-layout>

@@ -24,8 +24,10 @@ class CreateShippingsTable extends Migration
             $table->string('receiver_email')->nullable();
             $table->string('receiver_phone')->nullable();
             $table->string('shipping_type')->nullable();
+            $table->string('shipping_mode')->nullable();
+            $table->string('payment_mode')->nullable();
             $table->string('courier')->nullable();
-            $table->string('total_frieght')->nullable();
+            $table->string('total_freight')->nullable();
             $table->string('carrier')->nullable();
             $table->string('carrier_ref')->nullable();
             $table->time('departure_time')->nullable();
@@ -33,13 +35,9 @@ class CreateShippingsTable extends Migration
             $table->string('destination')->nullable();
             $table->date('pickup_date')->nullable();
             $table->time('pickup_time')->nullable();
-            $table->date('expected_delivery_date')->nullable();
+            $table->date('delivery_date')->nullable();
             $table->longText('comments')->nullable();
-            $table->date('history_date')->nullable();
-            $table->time('history_time')->nullable();
-            $table->string('location')->nullable();
             $table->string('status')->nullable();
-            $table->longText('remarks')->nullable();
             $table->timestamps();
         });
     }

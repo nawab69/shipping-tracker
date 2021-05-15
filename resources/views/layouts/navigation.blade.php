@@ -24,6 +24,9 @@
                     <x-nav-link :href="route('shipment.index')" :active="request()->routeIs('shipment.index')">
                         {{ __('Shipments') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('receive.index')" :active="request()->routeIs('receive.index')">
+                        {{ __('Receive') }}
+                    </x-nav-link>
                 </div>
 
             </div>
@@ -81,6 +84,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('shipment.index')" :active="request()->routeIs('shipment.index')">
                 {{ __('Shipments') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('receive.index')" :active="request()->routeIs('receive.index')">
+                {{ __('Receive') }}
             </x-responsive-nav-link>
         </div>
 

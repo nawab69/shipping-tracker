@@ -17,7 +17,7 @@
     <!-- Basic Page Needs
   ================================================== -->
 
-    <title>Expeditor</title>
+    <title>U-rich</title>
 
     <meta name="format-detection" content="telephone=no" />
     <meta charset="utf-8" />
@@ -85,27 +85,6 @@
     <!-- - - - - - - - - - - - - - Header - - - - - - - - - - - - - - - - -->
 
     <header id="header">
-        <!-- top-bar -->
-
-        <div class="top-bar">
-            <div class="container">
-                <div class="table-row">
-                    <div class="col-sm-6">
-                        <ul class="contact-info">
-                            <li>Phone: <a href="#">800-987-65-43</a></li>
-                            <li>Email: <a href="#">info@companyname.com</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6">
-                        <ul class="client-info">
-                            <li><a href="#get_quote" class="animated">Get a Quote</a></li>
-                            <li><a href="#">Shipment Tracker</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- top-header -->
 
@@ -116,7 +95,7 @@
                         <!--Logo-->
 
                         <a href="{{url('/')}}" class="logo">
-                            <img src="{{url('/')}}/landing/images/logo.png" alt="" />
+                            <img src="{{url('/')}}/image/logo.png" alt="" />
                         </a>
                     </div>
                     <div class="col-md-9">
@@ -137,21 +116,8 @@
                                             <li class="">
                                                 <a href="{{url('/about-us')}}">About</a>
                                             </li>
-                                            <li class="dropdown">
-                                                <a href="#">Services</a>
-                                                <!--sub menu-->
-                                                <div class="sub-menu-wrap">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="services.html">Services Overview</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="single_service.html"
-                                                            >Single Service Page</a
-                                                            >
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                            <li class="">
+                                                <a href="{{url('/services')}}">Services</a>
                                             </li>
                                             <li class="">
                                                 <a href="{{url('/contact-us')}}">Contact</a>
@@ -190,57 +156,46 @@
                         <!-- - - - - - - - - - - - - - Widget - - - - - - - - - - - - - - - - -->
                         <div class="widget">
                             <h6 class="widget-title">Contact Us</h6>
-                            <p>
-                                Expeditor Inc.<br />
-                                9870 St Vincent Place, Glasgow, <br />
-                                DC 45 Fr 45
-                            </p>
+                            <p>Room03, 19/F., Wong's Factory Building, <br />
+                                368-370 Sha Tsui Road,Tsuen Wan, NT</p>
+                            <p>Hong Kong - China</p>
 
                             <ul class="contact-info">
-                                <li>
-                                    <span class="licon-telephone"></span>
-                                    <a href="callto:18005596580">+ 1 800 559 6580</a>
-                                </li>
-                                <li>
-                                    <span class="licon-at-sign"></span>
-                                    <a href="mailto:mail@companyname.com"
-                                    >mail@companyname.com</a
-                                    >
-                                </li>
+                                <li><span class="licon-telephone"></span> <a href="callto:+85230115474">+852 3011 5474</a></li>
+                                <li><span class="licon-telephone"></span> <a href="callto:+85236980186">+852 3698 0186</a></li>
+                                <li><span class="licon-at-sign"></span> <a href="mailto:billychiu@urichf.com.hk">billychiu@urichf.com.hk</a></li>
+
                             </ul>
-                            <ul class="social-icons">
-                                <li>
-                                    <a href="#"><i class="icon-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="icon-gplus"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="icon-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="icon-linkedin-1"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="icon-mail"></i></a>
-                                </li>
-                            </ul>
+{{--                            <ul class="social-icons">--}}
+{{--                                <li>--}}
+{{--                                    <a href="#"><i class="icon-facebook"></i></a>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <a href="#"><i class="icon-gplus"></i></a>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <a href="#"><i class="icon-twitter"></i></a>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <a href="#"><i class="icon-linkedin-1"></i></a>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <a href="#"><i class="icon-mail"></i></a>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
                         </div>
                         <!-- - - - - - - - - - - - - - End of Widget - - - - - - - - - - - - - - - - -->
                     </div>
                     <div class="col-md-3 col-xs-6">
                         <!-- - - - - - - - - - - - - - Widget - - - - - - - - - - - - - - - - -->
                         <div class="widget">
-                            <h6 class="widget-title">About Expeditor</h6>
+                            <h6 class="widget-title">About Urichf</h6>
                             <ul class="info-links">
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Our Team</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Testimonials</a></li>
-                                <li><a href="#">Global Network</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">News</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="{{url('/about-us')}}">About Us</a></li>
+
+                                <li><a href="{{url('/services')}}">Services</a></li>
+
+                                <li><a href="{{url('/contact-us')}}">Contact Us</a></li>
                             </ul>
                         </div>
                         <!-- - - - - - - - - - - - - - End of Widget - - - - - - - - - - - - - - - - -->
@@ -250,14 +205,14 @@
                         <div class="widget">
                             <h6 class="widget-title">Services</h6>
                             <ul class="info-links">
-                                <li><a href="#">Road Transport</a></li>
-                                <li><a href="#">Sea Freight</a></li>
-                                <li><a href="#">Air Freight</a></li>
-                                <li><a href="#">Project Forwarding</a></li>
-                                <li><a href="#">Logistics</a></li>
-                                <li><a href="#">Warehousing</a></li>
-                                <li><a href="#">Cargo insurance</a></li>
-                                <li><a href="#">Supply Chain</a></li>
+                                <li><a href="{{url('/services')}}">Road Transport</a></li>
+                                <li><a href="{{url('/services')}}">Sea Freight</a></li>
+                                <li><a href="{{url('/services')}}">Air Freight</a></li>
+                                <li><a href="{{url('/services')}}">Project Forwarding</a></li>
+                                <li><a href="{{url('/services')}}">Logistics</a></li>
+                                <li><a href="{{url('/services')}}">Warehousing</a></li>
+                                <li><a href="{{url('/services')}}">Cargo insurance</a></li>
+                                <li><a href="{{url('/services')}}">Supply Chain</a></li>
                             </ul>
                         </div>
                         <!-- - - - - - - - - - - - - - End of Widget - - - - - - - - - - - - - - - - -->
@@ -291,7 +246,7 @@
             <div class="container">
                 <div class="table-row">
                     <div class="col-sm-6">
-                        Copyright Expeditor © 2017. All Rights Reserved
+                        Copyright U-rich © 2021. All Rights Reserved
                     </div>
                     <div class="col-sm-6">
                         <ul class="info-links h-type">

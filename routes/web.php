@@ -18,6 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::view('/about-us','pages.about');
+Route::view('/services','pages.service');
+Route::view('/contact-us','pages.contact');
 Route::view('/track','pages.track');
 Route::post('/track', [\App\Http\Controllers\TrackController::class,'track'])->name('track.now');
 

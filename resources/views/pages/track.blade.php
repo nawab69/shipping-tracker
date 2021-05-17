@@ -10,7 +10,7 @@
 
             <ul class="breadcrumbs">
 
-                <li><a href="index.html">Home</a></li>
+                <li><a href="{{url('/')}}">Home</a></li>
                 <li>Shipment Tracking</li>
 
             </ul>
@@ -49,10 +49,10 @@
                     <div class="banners-wrap">
 
                         <!-- Banner -->
-                        <a href="#" class="banner-item">
+                        <a href="{{url('/contact-us')}}" class="banner-item">
                             <div class="banner-inner">
                                 <h5 class="banner-title">Have a Question?</h5>
-                                <p>Donec sagittis euismod purus.Sed ut perspiciatis unde omnis iste natus error.</p>
+                                <p>We will be happy to answer all your questions, feel free to contact us</p>
                                 <div class="btn btn-small">Contact Us</div>
                                 <i class="licon-question-circle"></i>
                             </div>

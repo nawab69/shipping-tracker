@@ -318,12 +318,8 @@
                         </h2>
 
                         <!-- Medium text size -->
-                        <p class="text-size-medium">
-                            If you need assistance getting your purchases home,
-                        </p>
-
                         <p>
-                            we can arrange a door-to-door delivery service at reasonable rates.
+                            If you need assistance getting your purchases home, we can arrange a door-to-door delivery service at reasonable rates.
                         </p>
 
                         <p>

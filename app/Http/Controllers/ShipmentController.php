@@ -27,8 +27,9 @@ class ShipmentController extends Controller
 
     public function store(Request $request)
     {
-
-
+        $request->validate([
+            'tracking_no' => 'string|unique:shippings'
+        ]);
         try {
             $shipping = Shipping::create($request->except('qty','type','description','weight','date','time','location','remarks'));
             $lenght = collect($request->qty)->count();

@@ -139,7 +139,7 @@
                             <x-label for="carrier" :value="__('Carrier')" />
 
                             <select class='rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full mt-2' id="carrier" name="carrier">
-                                <option value="DHL">DHL</option>
+                                <option value="U-RICH">U-RICH</option>
                                 <option value="USPS">USPS</option>
                                 <option value="FedEx">FedEx</option>
                             </select>
@@ -172,7 +172,18 @@
                             <x-label for="delivery_date" :value="__('Expected Delivery Date')" />
                             <x-input id="delivery_date" class="block mt-1 w-full" type="date" name="delivery_date" :value="old('delivery_date')" required autofocus />
                         </div>
+
                         <div class="my-2 w-1/2 px-2">
+                            <x-label for="tracking_no" :value="__('Tracking No')" />
+                            <x-input id="tracking_no" class="block mt-1 w-full" type="text" name="tracking_no" :value="old('tracking_no')" required autofocus />
+                            @error('tracking_no')
+                            <div class="text-red-600">
+                                {{$message}}
+                            </div>
+                            @enderror
+                        </div>
+
+                        <div class="my-2 w-full px-2">
                             <x-label for="comments" :value="__('Comments')" />
                             <x-form.textarea class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full mt-2" name='comments'>{{ old('comments') }}</x-form.textarea>
                         </div>

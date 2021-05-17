@@ -15,9 +15,7 @@ class ShippingTable extends LivewireDatatable
     public function columns()
     {
         return [
-            Column::callback(['id'],function ($id){
-                return 'TR' . str_pad($id, 8, "0", STR_PAD_LEFT);
-            })->filterable()->label('ID'),
+            Column::name('tracking_no')->filterable()->label('TRACKING NO'),
             Column::name('shipper_name')->filterable()->searchable(),
             Column::name('receiver_name')->filterable()->searchable(),
             Column::name('shipping_type')->filterable()->searchable(),

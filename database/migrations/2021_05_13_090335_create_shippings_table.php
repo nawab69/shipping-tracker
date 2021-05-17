@@ -15,6 +15,7 @@ class CreateShippingsTable extends Migration
     {
         Schema::create('shippings', function (Blueprint $table) {
             $table->id();
+            $table->string('tracking_no')->unique();
             $table->string('shipper_name')->nullable();
             $table->longText('shipper_address')->nullable();
             $table->string('shipper_email')->nullable();

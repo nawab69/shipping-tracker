@@ -20,7 +20,7 @@
                 <div class="card-body p-0">
                     <div class="row justify-content-between">
                         <div class="col-12">
-                            <div>{!! DNS1D::getBarcodeHTML($data->get_tracking_number(), 'c39') !!}</div>
+                            <div>{!! DNS1D::getBarcodeHTML($data->tracking_no, 'c39') !!}</div>
                         </div>
 
                     </div>

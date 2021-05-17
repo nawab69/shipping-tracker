@@ -9,9 +9,8 @@ class TrackController extends Controller
 {
     public function track(Request $request)
     {
-        $shipping_id = (int) str_replace('TR','',$request->shipping_id);
-        $data =  Shipping::findOrFail($shipping_id);
-        return view('shipments.show',compact('data'));
 
+        $data =  Shipping::where('tracking_no',$request->shipping_id)->firstOrFail();
+        return view('shipments.show',compact('data'));
     }
 }

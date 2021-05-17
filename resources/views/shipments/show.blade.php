@@ -9,10 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="p-6 my-6 mr-1 bg-white border-gray-200 w-full overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="flex justify-center">
-                    @php
-                    $data_id = 'TR' . str_pad($data->id, 8, "0", STR_PAD_LEFT)
-                    @endphp
-                    {!!  DNS1D::getBarcodeSvg($data_id, 'c39',1,50); !!}
+                    {!!  DNS1D::getBarcodeSvg($data->tracking_no, 'c39',1,50); !!}
                 </div>
                 <hr class="mt-2">
                 <div class="flex justify-between">

@@ -99,15 +99,14 @@ class ShipmentController extends Controller
 
         try {
 
-            $shipping_id = (int) str_replace('TR','',$request->shipping_id);
 
-            $shipping = Shipping::findOrFail($shipping_id);
+            $shipping = Shipping::where('tracking_no',$request->shipping_id)->firstOrFail();
             $shipping->update([
                 'status' => $request->status
             ]);
 
             Shipstatus::create([
-                'shipping_id' => $shipping_id,
+                'shipping_id' => $shipping->id,
                 'date' => $request->date,
                 'time' => $request->time,
                 'remarks' => $request->remarks,
